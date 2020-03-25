@@ -33,7 +33,7 @@ mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_passwor
 $HOME/.composer/vendor/bin/valet install
 
 # Create apps directory
-mkdir /var/www/apps
+mkdir $HOME/Documents/apps
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
