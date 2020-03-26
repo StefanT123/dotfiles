@@ -12,6 +12,7 @@ alias apps='cd $HOME/Documents/apps'
 alias phptin='cd $HOME/Documents/php_tinkering'
 alias brainster='cd $HOME/Documents/brainster'
 alias dotfiles='cd $HOME/Documents/dotfiles'
+alias til='cd $HOME/Documents/til'
 
 # JS
 alias nrd='npm run dev'
