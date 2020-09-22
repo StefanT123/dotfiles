@@ -5,7 +5,7 @@ alias dbadmin='php -S localhost:8080 -t /usr/share/phpmyadmin/'
 alias copyssh='xclip -sel clip < ~/.ssh/id_rsa.pub && echo 'Copied''
 alias expose='ssh -R 80:test.web:80 serveo.net'
 alias myip='curl ifconfig.io'
-alias cat='bat'
+alias cat='batcat'
 
 # Directories
 alias apps='cd $HOME/Documents/apps'
