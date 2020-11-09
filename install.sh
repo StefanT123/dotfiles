@@ -9,7 +9,7 @@ sudo apt install -y bash bat coreutils git grep unzip curl wget build-essential 
 # Install packages for development
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-sudo apt install -y nginx php7.4 php7.4-{fpm,cli,curl,gd,mbstring,mysql,zip,sqlite3,imagick} imagemagick mariadb-server redis-server
+sudo apt install -y nginx php7.4 php7.4-{fpm,cli,curl,gd,mbstring,mysql,zip,sqlite3,imagick} php8.0 php8.0-{fpm,cli,curl,gd,mbstring,mysql,zip,sqlite3,imagick} imagemagick mariadb-server redis-server
 echo "Packages are installed, you can read the docs for them, to see if something needs to be configured"
 
 # Install composer
@@ -27,7 +27,7 @@ sudo apt install -y nodejs
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'root'; FLUSH PRIVILEGES;"
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer cpriego/valet-linux
+/usr/local/bin/composer global require laravel/installer cpriego/valet-linux friendsofphp/php-cs-fixer phpmd/phpmd squizlabs/php_codesniffer
 
 # Install valet linux (see https://cpriego.github.io/valet-linux/ for setting up)
 $HOME/.composer/vendor/bin/valet install
@@ -39,7 +39,7 @@ mkdir $HOME/Documents/apps
 rm -rf $HOME/.zshrc
 ln -s $HOME/Documents/dotfiles/.zshrc $HOME/.zshrc
 
-## Install applications (Be aware that some apps doesn't have a realease for your version of ubuntu)
+## Install applications (Be aware that some apps doesn't have a release for your version of ubuntu)
 # albert
 wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_$(lsb_release -rs)/Release.key -O Release.key
 sudo apt-key add - < Release.key
