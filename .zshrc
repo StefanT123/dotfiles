@@ -85,6 +85,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# if you want to use pulse VPN
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse/extra/usr/lib/x86_64-linux-gnu/
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -106,3 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# if you want to use pulse VPN
+alias vpn=/usr/local/pulse/pulseUi
