@@ -27,10 +27,12 @@ sudo apt install -y nodejs
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'root'; FLUSH PRIVILEGES;"
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer cpriego/valet-linux friendsofphp/php-cs-fixer phpmd/phpmd squizlabs/php_codesniffer
+/usr/local/bin/composer global require laravel/installer friendsofphp/php-cs-fixer phpmd/phpmd squizlabs/php_codesniffer
 
 # Install valet linux (see https://cpriego.github.io/valet-linux/ for setting up)
-$HOME/.composer/vendor/bin/valet install
+# THIS PACKAGE IS NOT MAINTAINED AND IT CAN'T BE USED WITH VPN
+# /usr/local/bin/composer cpriego/valet-linux
+# $HOME/.composer/vendor/bin/valet install
 
 # Create apps directory
 mkdir $HOME/Documents/apps
@@ -55,6 +57,10 @@ rm -rf ./google-chrome-stable_current_amd64.deb
 
 # flameshot
 sudo apt install flameshot
+
+# VirtualBox
+sudo apt update
+sudo apt install virtualbox
 
 # grub customizer
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
@@ -125,6 +131,12 @@ cd ~
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install -y ./zoom_amd64.deb
 rm -rf ./zoom_amd64.deb
+
+# microsoft teams
+cd /tmp
+wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.30857_amd64.deb
+sduo apt install -y teams_1.3.00.30857_amd64.deb
+rm -rf ./teams_1.3.00.30857_amd64.deb
 
 echo "Done...\n"
 echo "You might need to restart your computer"

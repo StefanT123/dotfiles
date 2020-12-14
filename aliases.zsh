@@ -27,3 +27,5 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 # Misc
 alias test='vendor/bin/phpunit --colors=always'
 alias ftest='vendor/bin/phpunit --colors=always --filter'
+# if you want to use pulse VPN
+alias vpn=/usr/local/pulse/pulseUi
