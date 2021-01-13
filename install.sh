@@ -6,6 +6,22 @@ echo "Setting up..."
 sudo apt update
 sudo apt install -y bash bat coreutils git grep unzip curl wget build-essential apt-transport-https ca-certificates software-properties-common
 
+# Install docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt install docker-ce
+# Execute docker command without sudo
+sudo usermod -aG docker ${USER}
+su - ${USER}
+id -nG
+
+# Install docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
 # Install packages for development
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
