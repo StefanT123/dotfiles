@@ -154,5 +154,10 @@ wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.0
 sduo apt install -y teams_1.3.00.30857_amd64.deb
 rm -rf ./teams_1.3.00.30857_amd64.deb
 
+# peek (GIF capture)
+sudo add-apt-repository ppa:peek-developers/stable
+sudo apt update
+sudo apt install -y peek
+
 echo "Done...\n"
 echo "You might need to restart your computer"
