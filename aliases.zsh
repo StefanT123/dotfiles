@@ -9,6 +9,7 @@ alias cat='batcat'
 
 # Directories
 alias apps='cd $HOME/Documents/apps'
+alias ph='cd $HOME/Documents/apps/MG/ph'
 alias phptin='cd $HOME/Documents/php_tinkering'
 alias brainster='cd $HOME/Documents/brainster'
 alias dotfiles='cd $HOME/Documents/dotfiles'

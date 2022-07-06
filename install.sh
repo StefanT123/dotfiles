@@ -36,7 +36,7 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 # Install node and npm
 cd ~
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Set default MySQL root password and auth type.
@@ -151,13 +151,15 @@ rm -rf ./zoom_amd64.deb
 # microsoft teams
 cd /tmp
 wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.30857_amd64.deb
-sduo apt install -y teams_1.3.00.30857_amd64.deb
+sudo apt install -y teams_1.3.00.30857_amd64.deb
 rm -rf ./teams_1.3.00.30857_amd64.deb
 
 # peek (GIF capture)
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update
 sudo apt install -y peek
+
+sudo apt upgrade -y
 
 echo "Done...\n"
 echo "You might need to restart your computer"
