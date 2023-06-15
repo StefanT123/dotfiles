@@ -11,7 +11,6 @@ alias cat='batcat'
 alias apps='cd $HOME/Documents/apps'
 alias ph='cd $HOME/Documents/apps/MG/ph'
 alias phptin='cd $HOME/Documents/php_tinkering'
-alias brainster='cd $HOME/Documents/brainster'
 alias dotfiles='cd $HOME/Documents/dotfiles'
 alias til='cd $HOME/Documents/til'
 
@@ -26,8 +25,10 @@ alias gpush='git push -u origin'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Misc
-alias test='vendor/bin/phpunit --colors=always'
-alias ftest='vendor/bin/phpunit --colors=always --filter'
+if [ -f vendor/bin/phpunit ]; then
+  alias test='vendor/bin/phpunit'
+  alias ftest='vendor/bin/phpunit --filter'
+fi
 alias sail='vendor/bin/sail'
 # if you want to use pulse VPN
 alias vpn=/usr/local/pulse/pulseUi
