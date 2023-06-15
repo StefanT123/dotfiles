@@ -39,6 +39,13 @@ cd ~
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
 
+# Install mariadb
+sudo apt update
+sudo apt install -y mysql-server
+sudo systemctl start mysql.service
+sudo apt install -y mariadb-server
+sudo mysql_secure_installation
+
 # Set default MySQL root password and auth type.
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'root'; FLUSH PRIVILEGES;"
 
