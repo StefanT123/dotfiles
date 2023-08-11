@@ -32,3 +32,7 @@ fi
 alias sail='vendor/bin/sail'
 # if you want to use pulse VPN
 alias vpn=/usr/local/pulse/pulseUi
+
+#MG
+alias ph_deploy='tsh ssh web1@ded8208.ded.reflected.net'
+alias front_node='tsh ssh web1@ded7738.ded.reflected.net'
