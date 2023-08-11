@@ -25,14 +25,15 @@ docker-compose --version
 # Install packages for development
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-sudo apt install -y nginx php7.4 php7.4-{fpm,cli,curl,gd,mbstring,mysql,zip,sqlite3,imagick} php8.0 php8.0-{fpm,cli,curl,gd,mbstring,mysql,zip,sqlite3,imagick} imagemagick mariadb-server redis-server
+sudo apt install -y nginx php-cli php8.{1,2} php8.{{1,2}-{fpm,cli,curl,gd,mbstring,mysql,zip,sqlite3,imagick}} imagemagick mariadb-server redis-server
 echo "Packages are installed, you can read the docs for them, to see if something needs to be configured"
 
 # Install composer
-cd ~
-curl -sS https://getcomposer.org/installer -o composer-setup.php
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+cd ~/Downloads
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+php -r "unlink('composer-setup.php');"
 
 # Install node and npm
 cd ~
