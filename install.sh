@@ -25,7 +25,7 @@ docker-compose --version
 # Install packages for development
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-sudo apt install -y nginx php-cli php8.{"1" "2"} php8.1-{"fpm" "cli" "curl" "gd" "mbstring" "mysql" "zip" "sqlite3" "imagick"} php8.2-{"fpm" "cli" "curl" "gd" "mbstring" "mysql" "zip" "sqlite3" "imagick"} imagemagick mariadb-server redis-server
+sudo apt install -y nginx php-cli php8.{"1","2"} php8.1-{"fpm","cli","curl","gd","mbstring","mysql","zip","sqlite3","imagick"} php8.2-{"fpm","cli","curl","gd","mbstring","mysql","zip","sqlite3","imagick"} imagemagick mariadb-server redis-server
 echo "Packages are installed, you can read the docs for them, to see if something needs to be configured"
 
 # Install composer
