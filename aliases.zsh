@@ -37,3 +37,4 @@ alias vpn=/usr/local/pulse/pulseUi
 alias ph_deploy='tsh ssh web1@ded8208.ded.reflected.net'
 alias front_node='tsh ssh web1@ded8302.ded.reflected.net'
 alias ph_stage='tsh ssh web1@ded8335.ded.reflected.net'
+alias dev='tsh ssh c-s_tanevski@ded8629.ded.reflected.net'
