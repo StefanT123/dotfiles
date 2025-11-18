@@ -33,7 +33,7 @@ alias sail='vendor/bin/sail'
 # if you want to use pulse VPN
 alias vpn=/usr/local/pulse/pulseUi
 # Bento PDF editor
-alias pdf-editor=apps && cd PDF-editor && php -S localhost:3000
+alias pdf-editor='cd $HOME/Documents/apps/PDF-editor && php -S localhost:3000'
 
 #MG
 alias ph_deploy='tsh ssh web1@ded8208.ded.reflected.net'
