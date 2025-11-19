@@ -168,6 +168,9 @@ sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update
 sudo apt install -y peek
 
+# rust
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+
 sudo apt upgrade -y
 
 echo "Done...\n"
