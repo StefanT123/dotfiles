@@ -35,6 +35,12 @@ alias vpn=/usr/local/pulse/pulseUi
 # Bento PDF editor
 alias pdf-editor='cd $HOME/Documents/apps/PDF-editor && php -S localhost:3000'
 
+alias pdf-stirling='docker run -d \
+  --name stirling-pdf \
+  -p 4000:8080 \
+  -v ./stirling-data:/configs \
+  stirlingtools/stirling-pdf:latest'
+
 #MG
 alias ph_deploy='tsh ssh web1@ded8208.ded.reflected.net'
 alias front_node='tsh ssh web1@ded8302.ded.reflected.net'

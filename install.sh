@@ -171,6 +171,9 @@ sudo apt install -y peek
 # rust
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
+# hetty (burp studio for free)
+sudo snap install hetty
+
 sudo apt upgrade -y
 
 echo "Done...\n"
